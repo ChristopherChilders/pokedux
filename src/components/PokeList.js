@@ -1,3 +1,5 @@
+// This is a dumb componenet
+
 import React from 'react';
 
 function PokeList({cards}){
