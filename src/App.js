@@ -5,6 +5,7 @@ import './App.css';
 import PokeList from './containers/PokeListContainer';
 // Testing the dummy component
 // import PokeList from './components/PokeList';
+import VisibilityButton from './containers/VisibilityButtonContainer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <h1>PokeThings</h1>
       <PokeList />
       {/* <PokeList /> */}
+      <VisibilityButton />
     </div>
   );
 }
