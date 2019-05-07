@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 ////////////////////////////////////////////////////////////////////
 // State
+import {createStore} from 'redux';
 import initialState from './base.json';
 console.log(initialState);  
 
@@ -24,7 +25,7 @@ function catchCard (id) {
         }
     }
 }
-
+window.catchCard = catchCard;
 
 /////////////////////////////////////////////////////////////////////
 // REDUCER
@@ -41,7 +42,8 @@ function cards(state=initialState, action={type: ''}){
 
 /////////////////////////////////////////////////////////////////////
 // STORE    
-
+const store = createStore(cards);
+window.store = store;
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
