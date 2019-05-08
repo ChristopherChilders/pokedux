@@ -5,13 +5,19 @@ import {setVisibilityAll, setVisibilityCaught, setVisibilityUncaught} from '../a
 // gotta translate from redux state to react props
 const mapStateToProps = (state) => {
     return {
-        label: state.visibilityFilter
+        visibilityFilter: state.visibilityFilter
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleClick: (id) => {
-            dispatch(setVisibilityAll(id))
+        handleClick: () => {
+            dispatch(setVisibilityAll());
+        },
+        handleClick: () => {
+            dispatch(setVisibilityCaught());
+        },
+        handleClick: () => {
+            dispatch(setVisibilityUncaught());
         }
     }
 }
